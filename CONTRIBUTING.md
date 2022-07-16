@@ -294,24 +294,24 @@ A "point of interest" or POI is any feature on the map represented by an icon on
 
 ### Categories
 
-POIs are broken down into the following broad categories, in order to constrain the number of colors shown on the map.  Some features may not cleanly fit into one category or another.  Contributors should consider other POIs in the category to determine which category is the best fit.
+POIs are broken down into the following broad categories, in order to constrain the number of colors shown on the map. Some features may not cleanly fit into one category or another. Contributors should consider other POIs in the category to determine which category is the best fit.
 
-* **Geographic Place Names**: labels associated with `place=` tags, for countries, cities, locations, etc.
-* **Infrastructure**: features associated with public infrastructure, health, safety, or government.
-* **Consumer**: businesses that provide services to the public, such as shops and restaurants.
-* **Outdoor**: parks, nature reserves, and other outdoorsy features.
-* **Attraction**: places where people go for entertainment, leisure, or curiosity.
-* **Transportation**: places where people can access forms of transportation, such as airports, train stations, bus stops, and other public transit.
+- **Geographic Place Names**: labels associated with `place=` tags, for countries, cities, locations, etc.
+- **Infrastructure**: features associated with public infrastructure, health, safety, or government.
+- **Consumer**: businesses that provide services to the public, such as shops and restaurants.
+- **Outdoor**: parks, nature reserves, and other outdoorsy features.
+- **Attraction**: places where people go for entertainment, leisure, or curiosity.
+- **Transportation**: places where people can access forms of transportation, such as airports, train stations, bus stops, and other public transit.
 
 ### Color Scheme
 
 For consistency, POI icons should use the following color palette:
 
-| Category               | Pantone         | Color                                                        | RGB      | Hex triplet |
-| ---------------------- | --------------- | ------------------------------------------------------------ | -------- | ----------- |
-| Geographic Place Names | N/A             | <img src="doc-img/black.svg" height=18 width=50 /> Black     | 0 0 0    | #000000     |
-| Infrastructure         | 294             | <img src="doc-img/pantone_294.svg" height=18 width=50 /> Blue | 0 63 135 | #003f87     |
-| Consumer               | 167             | <img src="doc-img/pantone_167.svg" height=18 width=50 /> Orange | 186 82 5 | #ba5205     |
-| Outdoor                |                 | TBD (green?)                                                 |          |             |
-| Attraction             |                 | TBD (brown?)                                                 |          |             |
+| Category               | Pantone         | Color                                                                       | RGB      | Hex triplet |
+| ---------------------- | --------------- | --------------------------------------------------------------------------- | -------- | ----------- |
+| Geographic Place Names | N/A             | <img src="doc-img/black.svg" height=18 width=50 /> Black                    | 0 0 0    | #000000     |
+| Infrastructure         | 294             | <img src="doc-img/pantone_294.svg" height=18 width=50 /> Blue               | 0 63 135 | #003f87     |
+| Consumer               | 167             | <img src="doc-img/pantone_167.svg" height=18 width=50 /> Orange             | 186 82 5 | #ba5205     |
+| Outdoor                |                 | TBD (green?)                                                                |          |             |
+| Attraction             |                 | TBD (brown?)                                                                |          |             |
 | Transportation         | Medium Purple C | <img src="doc-img/pantone_medium_purple_c.svg" height=18 width=50 /> Purple | 78 0 142 | #4e008e     |
