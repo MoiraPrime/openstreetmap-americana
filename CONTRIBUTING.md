@@ -287,3 +287,31 @@ This style strives to draw representative highway shields wherever they are tagg
 - Shields with a stacked ref configuration, with `/` separating the two lines of text in the `ref` value. Currently, these `ref` values are displayed verbatim on one line, and the code necessary for stacked ref rendering has not been written yet ([#366](https://github.com/ZeLonewolf/openstreetmap-americana/issues/366)). Such cases include:
   - **Italy "Diramazione" (branch) motorways**. Between their main autostrade "A" roads, the Italian motorway network has branch motorways which carry the name of both highways that they connect. For example, the A7 and A26 motorways have a branch motorway named A7/A26, which is correctly tagged `ref=A7/A26` and shown on shields with the two numbers stacked vertically.
   - **West Virginia County Routes**. The West Virginia Department of Transportation posts County Routes, which can have shields with two stacked numbers. For example, in Mercer County, County Route 460/1 is a branch off U.S. Route 460, and County Route 27/6 is a branch off County Route 27. These routes are correctly tagged `ref=460/1` and `ref=27/6` respectively, and shown on shields with the two numbers stacked vertically.
+
+## Points of Interest
+
+A "point of interest" or POI is any feature on the map represented by an icon on the map.
+
+### Categories
+
+POIs are broken down into the following broad categories, in order to constrain the number of colors shown on the map.  Some features may not cleanly fit into one category or another.  Contributors should consider other POIs in the category to determine which category is the best fit.
+
+* **Geographic Place Names**: labels associated with `place=` tags, for countries, cities, locations, etc.
+* **Infrastructure**: features associated with public infrastructure, health, safety, or government.
+* **Consumer**: businesses that provide services to the public, such as shops and restaurants.
+* **Outdoor**: parks, nature reserves, and other outdoorsy features.
+* **Attraction**: places where people go for entertainment, leisure, or curiosity.
+* **Transportation**: places where people can access forms of transportation, such as airports, train stations, bus stops, and other public transit.
+
+### Color Scheme
+
+For consistency, POI icons should use the following color palette:
+
+| Category               | Pantone         | Color                                                        | RGB      | Hex triplet |
+| ---------------------- | --------------- | ------------------------------------------------------------ | -------- | ----------- |
+| Geographic Place Names | N/A             | <img src="doc-img/black.svg" height=18 width=50 /> Black     | 0 0 0    | #000000     |
+| Infrastructure         | 294             | <img src="doc-img/pantone_294.svg" height=18 width=50 /> Blue | 0 63 135 | #003f87     |
+| Consumer               | 167             | <img src="doc-img/pantone_167.svg" height=18 width=50 /> Orange | 186 82 5 | #ba5205     |
+| Outdoor                |                 | TBD (green?)                                                 |          |             |
+| Attraction             |                 | TBD (brown?)                                                 |          |             |
+| Transportation         | Medium Purple C | <img src="doc-img/pantone_medium_purple_c.svg" height=18 width=50 /> Purple | 78 0 142 | #4e008e     |

@@ -4,6 +4,7 @@ export const standardPalette = {
   brown: "#693f23", // Pantone 469
   green: "#006747", // Pantone 342
   orange: "#f38f00", // Pantone 152
+  med_orange: "#ba5205", // Pantone 167
   pink: "#df4661", // Pantone 198
   purple: "#6d2077", // Pantone 259
   red: "#bf2033", // Pantone 187
@@ -16,8 +17,16 @@ export const hue = {
   tollRoad: 48,
   park: 136,
   water: 211,
-  transport: 250,
+  transport: 273,
   borderCasing: 281,
+};
+
+export const poi = {
+  infrastructure: standardPalette.blue,
+  consumer: standardPalette.med_orange,
+  //outdoor:
+  //attraction:
+  transportation: `hsl(${hue.transport}, 100%, 28%)`,
 };
 
 export const backgroundFill = "#faf6f2";
@@ -39,15 +48,6 @@ export const parkLabel = `hsl(${hue.park}, 71%, 29%)`;
 export const airportFill = `hsl(${hue.transport}, 41%, 95%)`;
 export const airportOutline = `hsl(${hue.transport}, 41%, 79%)`;
 export const airportRunway = `hsl(${hue.transport}, 41%, 79%)`;
-export const airportLabel = `hsl(${hue.transport}, 71%, 29%)`;
-
-export const poi = {
-  infrastructure: standardPalette.blue,
-  consumer: "#c05121",
-  //"hsl(35, 97%, 39%)",
-  //outdoor:
-  //attraction:
-  transportation: `hsl(${hue.transport}, 71%, 29%)`,
-};
+export const airportLabel = poi.transportation;
 
 export const shields = standardPalette;
