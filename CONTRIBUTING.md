@@ -253,7 +253,7 @@ Additionally, **`refsByWayName`** is an object mapping way names to text that ca
 
 `refsByWayName` only works if there is no `ref` tag and the expression in the `routeConcurrency` function in layer/highway_shield.js includes the `name` property in the image name. The network needs to be listed as an input value that causes the `match` expression to append `name` to the image name.
 
-When using `overrideByRef` or `refsByWayName`, make sure to add a line to the bottom section of this page explaining why it is necessary, as they are only intended for use in special cases.
+When using `overrideByRef` or `refsByWayName`, make sure to add a line to the Special Cases section of this page explaining why it is necessary, as they are only intended for use in special cases.
 
 ### Banners
 
