@@ -199,7 +199,7 @@ function buildLayers() {
     lyrOneway.bridge,
     lyrOneway.bridgeLink,
 
-    lyrPoi.poi
+    lyrPoi.poi,
   ];
 
   //Render bridge without layer on the lowest bridge layer
