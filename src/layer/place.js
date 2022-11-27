@@ -1,4 +1,4 @@
-import * as label from "../constants/label.js";
+import * as Label from "../constants/label.js";
 
 const cityLabelPaint = {
   "text-color": "#444",
@@ -12,6 +12,8 @@ const cityIcon = [
   ["get", "capital"],
   2,
   "star_nation_capital",
+  3,
+  "star_state_capital",
   4,
   "star_state_capital",
   "dot_city",
@@ -39,7 +41,7 @@ export const village = {
     ],
   ],
   layout: {
-    "text-font": ["Metropolis Bold"],
+    "text-font": ["OpenHistorical Bold"],
     "text-size": {
       base: 1.0,
       stops: [
@@ -57,7 +59,7 @@ export const village = {
         [11, 0.5],
       ],
     },
-    "text-field": label.name_en,
+    "text-field": Label.localizedName,
     "text-anchor": "bottom",
     "text-variable-anchor": [
       "bottom",
@@ -78,6 +80,9 @@ export const village = {
   minzoom: 11,
   maxzoom: 14,
   "source-layer": "place",
+  metadata: {
+    "americana:text-field-localized": true,
+  },
 };
 
 export const town = {
@@ -102,7 +107,7 @@ export const town = {
     ],
   ],
   layout: {
-    "text-font": ["Metropolis Bold"],
+    "text-font": ["OpenHistorical Bold"],
     "text-size": {
       base: 1.2,
       stops: [
@@ -120,7 +125,7 @@ export const town = {
         [11, 0.7],
       ],
     },
-    "text-field": label.name_en,
+    "text-field": Label.localizedName,
     "text-anchor": "bottom",
     "text-variable-anchor": [
       "bottom",
@@ -141,6 +146,9 @@ export const town = {
   minzoom: 4,
   maxzoom: 13,
   "source-layer": "place",
+  metadata: {
+    "americana:text-field-localized": true,
+  },
 };
 
 export const city = {
@@ -161,7 +169,7 @@ export const city = {
     ],
   ],
   layout: {
-    "text-font": ["Metropolis Bold"],
+    "text-font": ["OpenHistorical Bold"],
     "text-size": {
       base: 1.2,
       stops: [
@@ -179,7 +187,7 @@ export const city = {
         [11, 0.9],
       ],
     },
-    "text-field": label.name_en,
+    "text-field": Label.localizedName,
     "text-anchor": "bottom",
     "text-variable-anchor": [
       "bottom",
@@ -200,6 +208,9 @@ export const city = {
   minzoom: 4,
   maxzoom: 12,
   "source-layer": "place",
+  metadata: {
+    "americana:text-field-localized": true,
+  },
 };
 
 export const state = {
@@ -211,9 +222,9 @@ export const state = {
     "text-halo-width": 2,
     "text-halo-blur": 0.5,
   },
-  filter: ["all", ["==", "class", "state"]],
+  filter: ["==", ["get", "class"], "state"],
   layout: {
-    "text-font": ["Metropolis Regular"],
+    "text-font": ["OpenHistorical"],
     "text-size": {
       base: 1.2,
       stops: [
@@ -221,7 +232,7 @@ export const state = {
         [6, 14],
       ],
     },
-    "text-field": label.name_en,
+    "text-field": Label.localizedName,
     "text-padding": 1,
     "text-transform": "uppercase",
     "text-letter-spacing": 0.04,
@@ -241,6 +252,9 @@ export const state = {
   maxzoom: 7,
   minzoom: 3,
   "source-layer": "place",
+  metadata: {
+    "americana:text-field-localized": true,
+  },
 };
 export const countryOther = {
   id: "country_other",
@@ -251,21 +265,28 @@ export const countryOther = {
     "text-halo-color": "rgba(255,255,255,0.8)",
     "text-halo-width": 2.0,
   },
-  filter: ["all", ["==", "class", "country"], ["!has", "iso_a2"]],
+  filter: [
+    "all",
+    ["==", ["get", "class"], "country"],
+    ["!", ["has", "iso_a2"]],
+  ],
   layout: {
-    "text-font": ["Metropolis Regular"],
+    "text-font": ["OpenHistorical"],
     "text-size": {
       stops: [
         [3, 9],
         [7, 15],
       ],
     },
-    "text-field": label.name_en,
+    "text-field": Label.localizedName,
     "text-max-width": 6.25,
     "text-transform": "none",
   },
   source: "openmaptiles",
   "source-layer": "place",
+  metadata: {
+    "americana:text-field-localized": true,
+  },
 };
 export const country3 = {
   id: "country_3",
@@ -278,24 +299,27 @@ export const country3 = {
   },
   filter: [
     "all",
-    [">=", "rank", 3],
-    ["==", "class", "country"],
+    [">=", ["get", "rank"], 3],
+    ["==", ["get", "class"], "country"],
     ["has", "iso_a2"],
   ],
   layout: {
-    "text-font": ["Metropolis Regular"],
+    "text-font": ["OpenHistorical"],
     "text-size": {
       stops: [
         [3, 11],
         [7, 17],
       ],
     },
-    "text-field": label.name_en,
+    "text-field": Label.localizedName,
     "text-max-width": 6.25,
     "text-transform": "none",
   },
   source: "openmaptiles",
   "source-layer": "place",
+  metadata: {
+    "americana:text-field-localized": true,
+  },
 };
 export const country2 = {
   id: "country_2",
@@ -308,24 +332,27 @@ export const country2 = {
   },
   filter: [
     "all",
-    ["==", "rank", 2],
-    ["==", "class", "country"],
+    ["==", ["get", "rank"], 2],
+    ["==", ["get", "class"], "country"],
     ["has", "iso_a2"],
   ],
   layout: {
-    "text-font": ["Metropolis Regular"],
+    "text-font": ["OpenHistorical"],
     "text-size": {
       stops: [
         [2, 11],
         [5, 17],
       ],
     },
-    "text-field": label.name_en,
+    "text-field": Label.localizedName,
     "text-max-width": 6.25,
     "text-transform": "none",
   },
   source: "openmaptiles",
   "source-layer": "place",
+  metadata: {
+    "americana:text-field-localized": true,
+  },
 };
 export const country1 = {
   id: "country_1",
@@ -338,12 +365,12 @@ export const country1 = {
   },
   filter: [
     "all",
-    ["==", "rank", 1],
-    ["==", "class", "country"],
+    ["==", ["get", "rank"], 1],
+    ["==", ["get", "class"], "country"],
     ["has", "iso_a2"],
   ],
   layout: {
-    "text-font": ["Metropolis Regular"],
+    "text-font": ["OpenHistorical"],
     "text-size": {
       stops: [
         [1, 11],
@@ -351,7 +378,7 @@ export const country1 = {
         [6, 19],
       ],
     },
-    "text-field": label.name_en,
+    "text-field": Label.localizedName,
     "text-max-width": ["step", ["zoom"], 6.25, 3, 12],
     "text-transform": "none",
     "text-offset": [
@@ -364,6 +391,9 @@ export const country1 = {
   },
   source: "openmaptiles",
   "source-layer": "place",
+  metadata: {
+    "americana:text-field-localized": true,
+  },
 };
 export const continent = {
   id: "continent",
@@ -373,15 +403,18 @@ export const continent = {
     "text-halo-color": "rgba(255,255,255,0.7)",
     "text-halo-width": 1,
   },
-  filter: ["all", ["==", "class", "continent"]],
+  filter: ["==", ["get", "class"], "continent"],
   layout: {
-    "text-font": ["Metropolis Light"],
+    "text-font": ["OpenHistorical"],
     "text-size": 13,
-    "text-field": label.name_en,
+    "text-field": Label.localizedName,
     "text-justify": "center",
     "text-transform": "uppercase",
   },
   source: "openmaptiles",
   maxzoom: 1,
   "source-layer": "place",
+  metadata: {
+    "americana:text-field-localized": true,
+  },
 };

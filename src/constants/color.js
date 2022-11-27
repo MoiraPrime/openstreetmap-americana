@@ -51,3 +51,12 @@ export const airportRunway = `hsl(${hue.transport}, 41%, 79%)`;
 export const airportLabel = poi.transportation;
 
 export const shields = standardPalette;
+export const railwayTunnelFill = "hsl(0, 0%, 90%)";
+
+export const railFill = "hsl(0, 0%, 60%)";
+export const narrowGaugeFill = "hsl(0, 0%, 60%)";
+export const subwayFill = "hsl(0, 0%, 50%)";
+export const lightRailFill = "hsl(0, 0%, 50%)";
+export const tramFill = "hsl(0, 0%, 60%)";
+export const monorailFill = "hsl(0, 0%, 50%)";
+export const funicularFill = "hsl(0, 0%, 50%)";
