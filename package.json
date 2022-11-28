@@ -11,7 +11,7 @@
     "config": "shx cp src/configs/config.maptiler.js src/config.js",
     "code_format": "run-s code_format:prettier code_format:svgo",
     "code_format:prettier": "prettier --write --list-different .",
-    "code_format:svgo": "svgo -q -f icons/",
+    "code_format:svgo": "svgo --config=dev/svgo.config.js -q -f icons/",
     "clean": "shx rm -rf dist",
     "presprites": "shx rm -rf dist/sprites",
     "sprites": "node scripts/sprites.js",
